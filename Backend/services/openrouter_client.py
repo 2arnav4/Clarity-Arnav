@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv() # Load environment variables from .env
 
 # --- OpenRouter Configuration ---
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+OPENROUTER_API_KEY = "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"
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 # IMPORTANT: Choose a model available on OpenRouter

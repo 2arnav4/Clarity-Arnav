@@ -147,7 +147,7 @@ def get_hardcoded_news():
     """Returns the predefined list of news items."""
     # In a real app, this might fetch from a DB or cache
     # For now, it just returns our hardcoded list
-    print("--- Fetching hardcoded news data ---")
+    # print("--- Fetching hardcoded news data ---")
     return hardcoded_news_data
 
 def find_hardcoded_news_by_id(item_id):

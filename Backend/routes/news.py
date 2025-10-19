@@ -3,7 +3,7 @@
 from flask import Blueprint, request, jsonify, current_app
 from services.openrouter_client import get_verification_from_openrouter
 # --- Import BOTH functions from news_fetcher ---
-from services.news_fetcher import fetch_aggregated_news, get_news_by_id
+from services.news_fetcher import get_hardcoded_news, find_hardcoded_news_by_id
 # --- END IMPORT ---
 
 news_bp = Blueprint("news", __name__)
@@ -15,7 +15,7 @@ def get_trending_news():
     try:
         keywords = request.args.get('keywords', None)
         # Call the fetcher which now uses hardcoded data
-        result = fetch_aggregated_news(keywords=keywords) # Pass keywords if implemented
+        result = get_hardcoded_news() # Pass keywords if implemented
 
         if "error" in result:
              # If error occurred loading data
@@ -32,7 +32,7 @@ def get_trending_news():
 def get_single_news_item(item_id):
     """Endpoint to get a single news item by its ID."""
     try:
-        article = get_news_by_id(item_id)
+        article = find_hardcoded_news_by_id(item_id)
         if article:
             return jsonify(article)
         else:
