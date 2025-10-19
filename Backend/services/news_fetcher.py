@@ -1,18 +1,18 @@
 # File: Backend/utils/fetch_sources.py
-# Contains expanded hardcoded news data for demonstration
+# Contains hardcoded news data for demonstration
 
+# IMPORTANT: Generate many more diverse examples here!
 hardcoded_news_data = [
-    # --- Start: Data you provided ---
     {
-        'id': 'hc-1',
+        'id': 'hc-1', # Use a prefix like hc- to distinguish if needed
         'headline': 'New Study Shows Coffee Increases Life Expectancy by 20 Years',
         'summary': 'A viral claim suggests drinking coffee daily can extend life by two decades.',
-        'status': 'misinformation',
+        'status': 'misinformation', # 'verified', 'misinformation', 'unverified'
         'sources': [
             {'name': 'HealthBlog Daily', 'type': 'blog', 'url': '#'},
             {'name': '@healthguru', 'type': 'social', 'url': '#'}
         ],
-        'date': '2025-10-19T20:00:00Z',
+        'date': '2025-10-19T20:00:00Z', # Use ISO 8601 format preferably
         'originalContent': 'A recent study published in an obscure journal claims that daily coffee consumption can increase life expectancy by 20 years. The study has been widely shared on social media despite lacking peer review.',
         'correction': 'While moderate coffee consumption has been associated with modest health benefits, no credible research supports a 20-year life extension. The original study was not peer-reviewed and used flawed methodology.',
         'breakdown': [
@@ -31,14 +31,14 @@ hardcoded_news_data = [
         'sources': [
             {'name': 'NASA', 'type': 'news', 'url': '#'},
             {'name': 'Science Daily', 'type': 'news', 'url': '#'},
-            {'name': 'Nature Astronomy', 'type': 'news', 'url': '#'}
+            {'name': 'Nature Astronomy', 'type': 'news', 'url': '#'} # Changed source name slightly
         ],
         'date': '2025-10-19T17:30:00Z',
         'originalContent': 'NASA\'s James Webb Space Telescope has identified strong biosignature candidates on exoplanet K2-18 b, located 120 light years from Earth. The planet orbits within its star\'s habitable zone.',
-        'correction': 'This information is accurate. NASA and multiple scientific institutions have confirmed the discovery through peer-reviewed research published in Nature Astronomy.',
+        'correction': 'This information is accurate. NASA and multiple scientific institutions have confirmed the discovery through peer-reviewed research published in Nature Astronomy.', # Updated correction
         'breakdown': [
             'Confirmed by NASA through official channels',
-            'Published in peer-reviewed journal Nature Astronomy',
+            'Published in peer-reviewed journal Nature Astronomy', # Updated journal
             'Data collected from James Webb Space Telescope',
             'Multiple independent verification by astronomers',
             'Findings align with established exoplanet detection methods'
@@ -55,10 +55,10 @@ hardcoded_news_data = [
         ],
         'date': '2025-10-19T14:15:00Z',
         'originalContent': 'Social media posts claim 5G towers are disrupting bird migration patterns worldwide, citing anecdotal observations and correlating tower installations with bird behavior changes.',
-        'correction': 'There is no scientific evidence linking 5G technology to changes in bird migration. Bird migration patterns are influenced by climate change, habitat loss, and natural variations, not electromagnetic radiation from cellular towers at these frequencies.',
+        'correction': 'There is no scientific evidence linking 5G technology to changes in bird migration. Bird migration patterns are influenced by climate change, habitat loss, and natural variations, not electromagnetic radiation from cellular towers at these frequencies.', # Slightly elaborated correction
         'breakdown': [
             'No peer-reviewed studies support this claim',
-            '5G frequencies used for mobile networks are non-ionizing',
+            '5G frequencies used for mobile networks are non-ionizing', # Clarified frequency type
             'Wildlife agencies report no correlation',
             'Migration changes are well-documented to be climate-related',
             'Similar claims were debunked for 3G and 4G'
@@ -88,7 +88,7 @@ hardcoded_news_data = [
       'id': 'hc-5',
       'headline': 'Rumors of Hospital Overcrowding Due to Mystery Illness Dismissed by Officials',
       'summary': 'Health Department refutes claims circulating on social media about overwhelmed city hospitals.',
-      'status': 'verified',
+      'status': 'verified', # Officials verified the *refutation*
       'sources': [
           {'name': 'City Health Dept. Press Release', 'type': 'news', 'url': '#'},
           {'name': '@CityHealthAlerts', 'type': 'social', 'url': '#'}
@@ -104,6 +104,9 @@ hardcoded_news_data = [
           'Public health officials advise caution regarding misinformation.'
         ]
     },
+    # --- ADD MANY MORE VARIED EXAMPLES HERE ---
+    # Include different statuses, sources, dates, and topics.
+    # Aim for at least 15-20 diverse items.
     {
         'id': 'hc-6',
         'headline': 'Claim: New Solar Panel Tech Generates Power at Night',
@@ -137,109 +140,13 @@ hardcoded_news_data = [
             'No independent corroborating evidence presented yet.'
         ]
     },
-    # --- End: Data you provided ---
-
-    # --- Start: Additional Hardcoded Examples ---
-    {
-        'id': 'hc-8',
-        'headline': 'Artificial Sweeteners Proven Safe in Long-Term Study',
-        'summary': 'Major health organization releases findings after 10-year study on common sweeteners.',
-        'status': 'verified',
-        'sources': [
-            {'name': 'World Health Study Group', 'type': 'news', 'url': '#'},
-            {'name': 'Global Nutrition Journal', 'type': 'news', 'url': '#'}
-        ],
-        'date': '2025-10-15T11:00:00Z',
-        'originalContent': 'A decade-long, multi-center study involving 50,000 participants concludes that common artificial sweeteners like aspartame and sucralose do not pose significant health risks at typical consumption levels.',
-        'correction': 'The study published by the World Health Study Group in the Global Nutrition Journal supports the safety of these sweeteners within acceptable daily intake levels. Regulatory bodies worldwide have consistently reached similar conclusions.',
-        'breakdown': [
-            'Large-scale, long-term human study.',
-            'Published in a reputable peer-reviewed journal.',
-            'Findings consistent with previous large reviews.',
-            'Considers typical, not excessive, consumption levels.',
-            'Regulatory agencies like FDA and EFSA concur.'
-        ]
-    },
-    {
-        'id': 'hc-9',
-        'headline': '"Chemtrails" Contain Mind-Control Nanobots, Leaked Document Claims',
-        'summary': 'An unverified document shared online alleges a government conspiracy involving aircraft contrails.',
-        'status': 'misinformation',
-        'sources': [{'name': 'TruthSeeker Forum', 'type': 'blog', 'url': '#'}],
-        'date': '2025-10-14T08:20:00Z',
-        'originalContent': 'A document, claimed to be leaked from a secret government agency, details a program using aircraft contrails ("chemtrails") to disperse nanobots capable of influencing human thought.',
-        'correction': 'The "chemtrails" conspiracy theory is long-debunked; contrails are normal water vapor condensation. There is no evidence of nanobots being dispersed this way, nor technology for "mind control" via nanobots. The document lacks credibility.',
-        'breakdown': [
-            'Aircraft contrails are well-understood atmospheric phenomena.',
-            'No scientific basis for "mind control nanobots".',
-            'Source of the document is unverified and likely fabricated.',
-            'Claims align with known baseless conspiracy theories.',
-            'Atmospheric science and nanotechnology experts refute the claims.'
-        ]
-    },
-    {
-        'id': 'hc-10',
-        'headline': 'Electric Vehicle Batteries Losing Charge Overnight Mysteriously',
-        'summary': 'EV owners report significant battery drain while parked, cause unknown.',
-        'status': 'unverified',
-        'sources': [
-            {'name': 'EV Owners Online Forum', 'type': 'reddit', 'url': '#'},
-            {'name': 'Local News Segment', 'type': 'news', 'url': '#'}
-        ],
-        'date': '2025-10-18T19:00:00Z',
-        'originalContent': 'Multiple owners of the popular "VoltWing EV" model are reporting their car batteries draining by 20-30% overnight, even when not plugged in. Some speculate a software bug or external interference.',
-        'correction': 'Reports of unexpected battery drain are emerging, but the cause is currently unconfirmed. Manufacturer "VoltWing Motors" stated they are investigating the issue. Potential causes range from software updates, cold weather effects, to accessory drain. No evidence supports external interference.',
-        'breakdown': [
-            'Multiple anecdotal reports from owners exist.',
-            'Manufacturer has acknowledged and is investigating.',
-            'No official cause identified yet.',
-            'Common factors (cold, software) are being considered.',
-            'Claims of external interference lack evidence.'
-        ]
-    },
-     {
-        'id': 'hc-11',
-        'headline': 'Major City Announces Plan for Universal Basic Income Pilot Program',
-        'summary': 'City council approves funding for a two-year trial providing monthly stipends to low-income residents.',
-        'status': 'verified',
-        'sources': [
-            {'name': 'City Council Official Records', 'type': 'news', 'url': '#'},
-            {'name': 'Metropolis Times', 'type': 'news', 'url': '#'}
-        ],
-        'date': '2025-10-13T16:00:00Z',
-        'originalContent': 'Following a majority vote, the Metropolis City Council has allocated $50 million for a pilot program that will give 1,000 randomly selected low-income families $500 per month for two years, no strings attached.',
-        'correction': 'The Metropolis Times accurately reported the city council\'s decision, which is documented in official public records. The funding allocation and program details match the council\'s approved resolution.',
-        'breakdown': [
-            'Decision documented in official city council meeting minutes.',
-            'Funding approved through the standard legislative process.',
-            'Program details (amount, duration, participants) confirmed by city officials.',
-            'Reported by multiple credible news outlets.',
-            'Pilot program structure aligns with typical UBI trials.'
-        ]
-    },
-    {
-        'id': 'hc-12',
-        'headline': 'Drinking Bleach Cures Common Cold, Viral TikTok Video Claims',
-        'summary': 'Dangerous misinformation promoting ingestion of bleach as a health remedy spreads online.',
-        'status': 'misinformation',
-        'sources': [{'name': 'TikTok User @WellnessGuruX', 'type': 'social', 'url': '#'}],
-        'date': '2025-10-12T12:00:00Z',
-        'originalContent': 'A video showing someone adding drops of bleach to water and claiming it eliminates cold symptoms has gained millions of views before being taken down.',
-        'correction': 'Ingesting bleach is extremely dangerous and potentially fatal. It is a corrosive substance that damages internal organs and offers no health benefits. This is harmful misinformation contradicting all medical advice.',
-        'breakdown': [
-            'Bleach is toxic and corrosive.',
-            'Medical professionals universally condemn ingesting bleach.',
-            'No scientific basis for bleach as a cure for any illness.',
-            'Numerous documented cases of severe harm or death from bleach ingestion.',
-            'Social media platforms actively remove such dangerous content.'
-        ]
-    },
-    # --- Add at least 8-13 more diverse items here ---
-
+    # ... Add more entries ...
 ]
 
 def get_hardcoded_news():
     """Returns the predefined list of news items."""
+    # In a real app, this might fetch from a DB or cache
+    # For now, it just returns our hardcoded list
     print("--- Fetching hardcoded news data ---")
     return hardcoded_news_data
 

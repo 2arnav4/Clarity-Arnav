@@ -3,3 +3,4 @@ Backend/.envBackend/.env
 Backend/.env
 
 node_modules/
+py__pycache__/
