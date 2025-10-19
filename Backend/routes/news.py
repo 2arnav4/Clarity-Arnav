@@ -15,13 +15,15 @@ def get_trending_news():
     try:
         keywords = request.args.get('keywords', None)
         # Call the fetcher which now uses hardcoded data
-        result = get_hardcoded_news() # Pass keywords if implemented
+        articles = get_hardcoded_news() # Pass keywords if implemented
 
-        if "error" in result:
-             # If error occurred loading data
-             return jsonify({"error": result["error"]}), 500
+        # Format the response to match frontend expectations
+        result = {
+            "articles": articles,
+            "fetch_errors": None
+        }
 
-        return jsonify(result) # Should contain {"articles": [...], "fetch_errors": None}
+        return jsonify(result)
 
     except Exception as e:
         current_app.logger.error(f"Error in /trending route: {e}")
